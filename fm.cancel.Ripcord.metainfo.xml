@@ -2,6 +2,9 @@
 <component type="desktop-application">
   <id>fm.cancel.Ripcord</id>
   <name>Ripcord</name>
+  <developer id="fm.cancel">
+    <name>cancel</name>
+  </developer>
   <summary>Alternative desktop chat client for Slack (and Discord)</summary>
 
   <url type="homepage">https://cancel.fm/ripcord/</url>
@@ -39,21 +42,15 @@
         </ul>
         <p>Slack:</p>
         <ul>
-          <li>Fixed sign-in with username &amp; password no longer working.
-          <ul>
-            <li>Some stuff changed on Slack's servers. Now Ripcord has been updated to deal with it.</li>
-          </ul></li>
-          <li>Fixed file upload no longer working.
-          <ul>
-            <li>Same as above.</li>
-          </ul></li>
+          <li>Fixed sign-in with username &amp; password no longer working.</li>
+          <li>  Some stuff changed on Slack's servers. Now Ripcord has been updated to deal with it.</li>
+          <li>Fixed file upload no longer working.</li>
+          <li>  Same as above.</li>
           <li>Added per-message explicit timestamp in the right-click menu for messages.</li>
           <li>Increased per-workspace custom emoji limit from 100,000 to 1,000,000.</li>
-          <li>Added a workaround for Apple rdar://12345 links being mangled due to URL parsing treating the 12345 part as an integer IP address.
-          <ul>
-            <li>This integer parsing is apparently the "correct" behavior for parsing URLs, but results in rdar://12345 links being useless in Ripcord.</li>
-            <li>Ripcord now has a workaround that will rewrite those URLs to rdar://problem/12345 when they're clicked on or copied to the clipboard. This prevents the the number part from being (correctly?) parsed as integer, and should still work with the rdar:// URL handlers.</li>
-          </ul></li>
+          <li>Added a workaround for Apple rdar://12345 links being mangled due to URL parsing treating the 12345 part as an integer IP address.</li>
+          <li>  This integer parsing is apparently the "correct" behavior for parsing URLs, but results in rdar://12345 links being useless in Ripcord.</li>
+          <li>  Ripcord now has a workaround that will rewrite those URLs to rdar://problem/12345 when they're clicked on or copied to the clipboard. This prevents the the number part from being (correctly?) parsed as integer, and should still work with the rdar:// URL handlers.</li>
           <li>Added gemini:// as a whitelisted URL scheme.</li>
           <li>Added snrx:// as a whitelisted URL scheme.</li>
           <li>Note for Slack users: there is a known and unresolved issue where your channel sidebar may become cluttered with junk channels named like #mpdm-foo--bar. I know about this and I'm fixing it. The fix for it didn't make it into this version, 0.4.29, because a complete and flexible solution for it involves changing some code that will require heavy testing, and I didn't want to delay releasing an update any longer. Sorry about that.</li>
