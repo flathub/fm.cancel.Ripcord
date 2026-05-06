@@ -1,6 +1,6 @@
 app-id: fm.cancel.Ripcord
 runtime: org.kde.Platform
-runtime-version: '5.15-24.08'
+runtime-version: '5.15-25.08'
 sdk: org.kde.Sdk
 finish-args:
   - --device=dri
@@ -42,8 +42,10 @@ modules:
       - install -Dm 644 fm.cancel.Ripcord.metainfo.xml -t /app/share/metainfo/
       - rm -fr ./squashfs-root/.DirIcon ./squashfs-root/AppRun
       - rm -fr ./squashfs-root/lib/libEGL.so.* ./squashfs-root/lib/libgbm.so.* ./squashfs-root/lib/libglapi.so.*
-      - rm -fr ./squashfs-root/lib/libwayland-* ./squashfs-root/lib/libX* ./squashfs-root/lib/libxcb-* ./squashfs-root/lib/libxshmfence.so.*
-      - rm -fr ./squashfs-root/lib/libcrypto.so.* ./squashfs-root/lib/libssl.so.* ./squashfs-root/lib/libicu* ./squashfs-root/lib/libQt5* ./squashfs-root/plugins/ ./squashfs-root/qt.conf
+      - rm -fr ./squashfs-root/lib/libwayland-* ./squashfs-root/lib/libX* 
+      - rm -fr ./squashfs-root/lib/libxcb-* ./squashfs-root/lib/libxshmfence.so.*
+      - rm -fr ./squashfs-root/lib/libcrypto.so.* ./squashfs-root/lib/libssl.so.* ./squashfs-root/lib/libicu* 
+      - rm -fr ./squashfs-root/lib/libQt5* ./squashfs-root/plugins/ ./squashfs-root/qt.conf
       - rm -fr ./squashfs-root/Ripcord.desktop ./squashfs-root/Ripcord_Icon.png
       - cp -r ./squashfs-root/ /app/share/ripcord/
       - mkdir -p /app/bin/
